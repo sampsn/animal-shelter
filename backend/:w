@@ -8,7 +8,7 @@ app = FastAPI()
 origins = ["*"]
 
 app.add_middleware(
-    CORSMiddleware, allow_origins=origins, allow_methods=["*"], allow_headers=["*"]
+    CORSMiddleware, allow_orgins=origings, allow_methods=["*"], allow_headers=["*"]
 )
 # Make the pydantic model `Shelter` that will represent this data, then manually
 # change this list to be a list[Shelter]. You don't need to write code to convert
@@ -36,14 +36,6 @@ shelters: list[Shelter] = [
         animals=Animals(
             cats=4,
             dogs=7,
-        ),
-    ),
-    Shelter(
-        name="Gabes Dog Company",
-        address="His House",
-        animals=Animals(
-            cats=100,
-            dogs=100,
         ),
     ),
 ]
